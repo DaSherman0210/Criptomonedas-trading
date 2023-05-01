@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="imgs/logocrypto-removebg-preview.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+    <script src="js/index.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <img src="imgs/logocrypto-removebg-preview.png" alt="..." width="100px">
+        <h1>Criptomonedas</h1>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <div class="divPadreCrypto">
+                <div id="monedas">
+                <p>MONEDAS</p>
+                <select name="moneda" id="moneda">
+                    <option value="moneda">Selecciona Moneda</option> 
+                    <option value="USD">Dolar estado unidense</option>
+                    <option value="CAD">Dolar Canadiense</option>
+                    <option value="GBP">Libra Esterlina </option>
+                    <option value="CLP">Peso Chileno</option>
+                    <option value="RUB">Rublo Ruso</option>
+                </select>
+                </div>
+                <div id="criptomonedas">
+                    <p>CRIPTOMONEDAS</p>
+                    <select name="cripto" id="cripto">
+                        <option value="0">Selecciona Cryptomoneda</option>
+                    </select>
+                </div>
+                <div> 
+                    <p>CANTIDAD</p>
+                    <input id="monedaC" type="text">
+                </div>
+            </div>
+        </section>
+        <div class="bton">
+            <button type="button" class="btn btn-outline-info">Enviar al carrito</button>
+
+        </div>
+        <section class="tablaConte">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Moneda</th>
+                        <th>criptomoneda</th>
+                        <th>Cantidad</th>
+                        <th>precio Unitario</th>
+                        <th>precio total</th> 
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+</body>
+</html>
