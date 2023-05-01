@@ -37,17 +37,26 @@ header{
 /* Tabla */
 
 
-table{
+.tablaConte{
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+}
+
+.trrrrr{
+    margin-left: 1rem;
+    margin-right: 100rem;
 }
 
 th {
     padding: 10px;
     background-color: #ddd;
     border: 1px solid black;
-    
+}
+
+td{
+    background-color: azure;
+    border: 1px solid black;
 }
 .btn{
     border-radius: .2rem;
@@ -94,4 +103,7 @@ th {
     --bs-gradient: none;
 }
 
-    
+tbody tr {
+    text-align: center;
+    padding: 1rem;
+}
