@@ -8,7 +8,7 @@ header{
     align-items: center;
     font-size: 2.5rem;
     padding: 1.3rem;
-    background-color:rgb(245, 245, 245);
+    background-color:#f5f5f5;
     /* font-family: 'Oswald', sans-serif; */
     font-family: 'Lilita One', cursive;
 }
@@ -40,7 +40,8 @@ header{
 .tablaConte{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    padding: 2rem;
+    background-color:#f5f5f5 ;
 }
 
 .trrrrr{
@@ -59,6 +60,7 @@ td{
     border: 1px solid black;
 }
 .btn{
+    color: #0062cc;
     border-radius: .2rem;
     cursor: pointer;
     display: inline-block;
@@ -70,7 +72,8 @@ td{
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: white;   
+    background-color: white;
+    margin-bottom: 2rem;
 }
 
 .btn:hover {
@@ -107,3 +110,44 @@ tbody tr {
     text-align: center;
     padding: 1rem;
 }
+
+.danger{
+    --bs-btn-color: #820d0d;
+    --bs-btn-border-color: #820d0d;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #820d0d;
+    --bs-btn-hover-border-color: #820d0d;
+    --bs-btn-focus-shadow-rgb: 13, 202, 240;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #820d0d;
+    --bs-btn-active-border-color: #820d0d;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #820d0d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #820d0d;
+    --bs-gradient: none;
+}
+
+.boton{
+    background-color: white;
+    border: 2px solid red;
+    padding: .7rem;
+    color: red;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: .3rem;
+}
+
+.padreButo{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton:hover{
+    background-color: red;
+    color: white;
+}
+

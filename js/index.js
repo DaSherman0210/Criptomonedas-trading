@@ -1,15 +1,23 @@
 //selectores
-let cantidad
+let cantidad;
 let valorActual;
 let nime;
 let nome;
 let mon;
+let numeroTot;
+let array = [];
 const dia=document.querySelector('#dias')
 const optio=document.querySelector('#cripto')
 const cant=document.querySelector('#monedaC ')
 const porcentaje=document.querySelector('#porcentaje')
 const btnEnviarTabla = document.querySelector('#btnEnviarCarrito')
 const formulario = document.querySelector('.formulario')
+const comprar = document.querySelector('.boton')
+
+comprar.addEventListener('click' , ()=>{
+    guardarTabla();
+    eliminarTabla();
+})
 
 btnEnviarTabla.addEventListener('click' , ()=>{
     insertarNumero();
@@ -33,35 +41,47 @@ console.log(nome);
 console.log(nime);
 })
 
-/* function enviarTabla(e) {
-    const coso = e.target.value
-    console.log(e.target.value);
-    const tableishon = document.querySelector('#tablaBody')
-    const pedazoTabla = document.createElement ('td')
-    pedazoTabla.innerHTML = `
-    ${coso}
-    `
-    tableishon.appendChild(pedazoTabla)
-} */
+function guardarTabla() {
+    objeto = {
+        moneda: mon,
+        nombre: nome,
+        cuantos: cantidad,
+        precioSolo: nime,
+        precioTot: numeroTot
+    }
+    array = [...array, objeto]
+    localStorage.setItem("tabla", JSON.stringify(array))
+}
+
+function eliminarTabla() {
+    const tabla = document.querySelectorAll('.paElimin')
+    tabla.forEach((tablita)=>{
+        tablita.remove();    
+    })
+}
 
 function borrarContenido() {
-    console.log(4);
     formulario.reset();
 }
 
 function insertarNumero() {
-    const tabla = document.querySelector('.trr')
-    const cuerpo = document.createElement ('tr')
-    const numeroTot = nime * cantidad
-    cuerpo.innerHTML = `
-    <td>${mon}</td>
-    <td>${nome} </td>
-    <td>${cantidad}</td>
-    <td>${nime}</td>
-    <td>${numeroTot}</td>
-    `
-    console.log(numeroTot);
-    tabla.appendChild(cuerpo)
+    const buscador = document.querySelector('#monedaC')
+    if (buscador.textContent == "") {
+        alert('Rellene los campos necesarios')
+    }else{
+       const tabla = document.querySelector('.trr')
+        const cuerpo = document.createElement ('tr')
+        numeroTot = nime * cantidad
+        cuerpo.innerHTML = `
+        <td class = "paElimin">${mon}</td>
+        <td class = "paElimin">${nome} </td>
+        <td class = "paElimin">${cantidad}</td>
+        <td class = "paElimin">${nime}</td>
+        <td class = "paElimin">${numeroTot}</td>
+        `
+        console.log(numeroTot);
+        tabla.appendChild(cuerpo) 
+    } 
 }
 
 
